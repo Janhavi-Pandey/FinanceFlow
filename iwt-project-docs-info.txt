@@ -1,0 +1,25 @@
+-->give a preview of the website in the homepage (different cards when hover becomes enlarge)max upto 3 
+-->green main theme
+-->using floating objects in the background in login and sign-in
+-->same floating objects will be used for heading of personal finace dashboard
+-->homepage should include the features of your dashboard briefing about them
+-->instead of cursor try o use something different for homepage only
+-->main page should have a side bar
+-->keep the bot for queries
+-->keep revenue vs expense graph
+-->color theme
+Dominant Colors in the Dashboard Image
+
+Purpose / Area	                     	Hex Code		RGB
+Dark Teal Background		#233E45	                (35, 62, 69)
+Bright Mint Green (highlight)		#29BE7E	                (41, 190, 126)
+Teal-Blue Header / UI Elements		#3276A0		(50, 118, 160)
+Soft Coral Accent (icons/cards)		#CC8063		(204, 128, 99)
+Light Grey/Blue (text & subtle areas)	#B9C5D3		(185, 197, 211)
+Secondary Muted Teal			#316D60		(49, 109, 96)
+
+-->can use sheen on pie-charts buttons and other stuff
+-->line appears in hovering the navbar options
+-->i want floating objects in home page personal finance dashboard
+-->CSS wavy animation at the bottom of homepage
+
