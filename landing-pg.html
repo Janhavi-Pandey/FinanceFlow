@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinanceFlow - Dashboard</title>
+    <link rel="stylesheet" href="landing-pg.css">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=ntbOqE0dGZYl&format=png&color=000000">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-left">
+        <div class="logo">FinanceFlow</div>
+        <ul class="nav-links">
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#transactions">Transactions</a></li>
+          <li><a href="#travel">Transit Costs</a></li>
+          <li><a href="#wallet">Wallet</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <button class="icon-btn">
+          🔔
+          <span class="notification-dot"></span>
+        </button>
+        <button class="icon-btn"><img src="profile-inner-circle.png" alt="profile-logo" style="height:40px"></button>
+      </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+      <div class="month-badge">December 2025 Overview</div>
+      <!-- Urgent Bill Alert -->
+      <div class="urgent-alert">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-content">
+          <h3>Urgent Payment Due!</h3>
+          <p>
+            Credit Card Payment - Late fee will be imposed after Dec 20, 2025
+          </p>
+        </div>
+        <div class="alert-amount">₹12,500</div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="stats-grid">
+        <div class="stat-card income">
+          <h3>Total Income</h3>
+          <div class="stat-value">₹85,000</div>
+          <div class="stat-change">+12% from last month</div>
+        </div>
+        <div class="stat-card expense">
+          <h3>Total Expenses</h3>
+          <div class="stat-value">₹52,340</div>
+          <div class="stat-change">-5% from last month</div>
+        </div>
+        <div class="stat-card savings">
+          <h3>Monthly Saving</h3>
+          <div class="stat-value">₹32,660</div>
+          <div class="stat-change">+18% from last month</div>
+        </div>
+        <div class="stat-card balance">
+          <h3>Current Balance</h3>
+          <div class="stat-value">₹1,24,500</div>
+          <div class="stat-change">Across all accounts</div>
+        </div>
+      </div>
+
+      <!-- Income vs Expense Chart -->
+      <div class="chart-section">
+        <div class="chart-header">
+          <h2>Income vs Expenses</h2>
+          <div class="time-filter">
+            <button class="active">6 Months</button>
+            <button>1 Year</button>
+          </div>
+        </div>
+        <div class="line-chart-container">
+          <svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet">
+            <!-- Grid lines -->
+            <line
+              x1="50"
+              y1="250"
+              x2="750"
+              y2="250"
+              stroke="rgba(127, 163, 160, 0.3)"
+              stroke-width="2"
+            />
+            <line
+              x1="50"
+              y1="200"
+              x2="750"
+              y2="200"
+              stroke="rgba(127, 163, 160, 0.2)"
+              stroke-width="1"
+            />
+            <line
+              x1="50"
+              y1="150"
+              x2="750"
+              y2="150"
+              stroke="rgba(127, 163, 160, 0.2)"
+              stroke-width="1"
+            />
+            <line
+              x1="50"
+              y1="100"
+              x2="750"
+              y2="100"
+              stroke="rgba(127, 163, 160, 0.2)"
+              stroke-width="1"
+            />
+            <line
+              x1="50"
+              y1="50"
+              x2="750"
+              y2="50"
+              stroke="rgba(127, 163, 160, 0.2)"
+              stroke-width="1"
+            />
+
+            <!-- Income Line (Green) -->
+            <polyline
+              points="50,125 166,100 282,110 398,75 514,90 630,70"
+              fill="none"
+              stroke="#29BE7E"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <!-- Expense Line (Coral) -->
+            <polyline
+              points="50,150 166,135 282,130 398,145 514,125 630,155"
+              fill="none"
+              stroke="#CC8063"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <!-- Savings Line (Teal Blue) -->
+            <polyline
+              points="50,175 166,165 282,170 398,160 514,165 630,145"
+              fill="none"
+              stroke="#3276A0"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <!-- Income points -->
+            <circle cx="50" cy="125" r="5" fill="#29BE7E" />
+            <circle cx="166" cy="100" r="5" fill="#29BE7E" />
+            <circle cx="282" cy="110" r="5" fill="#29BE7E" />
+            <circle cx="398" cy="75" r="5" fill="#29BE7E" />
+            <circle cx="514" cy="90" r="5" fill="#29BE7E" />
+            <circle cx="630" cy="70" r="5" fill="#29BE7E" />
+
+            <!-- Expense points -->
+            <circle cx="50" cy="150" r="5" fill="#CC8063" />
+            <circle cx="166" cy="135" r="5" fill="#CC8063" />
+            <circle cx="282" cy="130" r="5" fill="#CC8063" />
+            <circle cx="398" cy="145" r="5" fill="#CC8063" />
+            <circle cx="514" cy="125" r="5" fill="#CC8063" />
+            <circle cx="630" cy="155" r="5" fill="#CC8063" />
+
+            <!-- Savings points -->
+            <circle cx="50" cy="175" r="5" fill="#3276A0" />
+            <circle cx="166" cy="165" r="5" fill="#3276A0" />
+            <circle cx="282" cy="170" r="5" fill="#3276A0" />
+            <circle cx="398" cy="160" r="5" fill="#3276A0" />
+            <circle cx="514" cy="165" r="5" fill="#3276A0" />
+            <circle cx="630" cy="145" r="5" fill="#3276A0" />
+
+            <!-- X-axis labels -->
+            <text
+              x="50"
+              y="275"
+              text-anchor="middle"
+              fill="#B9C5D3"
+              font-size="14"
+            >
+              Jul '25
+            </text>
+            <text
+              x="166"
+              y="275"
+              text-anchor="middle"
+              fill="#B9C5D3"
+              font-size="14"
+            >
+              Aug '25
+            </text>
+            <text
+              x="282"
+              y="275"
+              text-anchor="middle"
+              fill="#B9C5D3"
+              font-size="14"
+            >
+              Sep '25
+            </text>
+            <text
+              x="398"
+              y="275"
+              text-anchor="middle"
+              fill="#B9C5D3"
+              font-size="14"
+            >
+              Oct '25
+            </text>
+            <text
+              x="514"
+              y="275"
+              text-anchor="middle"
+              fill="#B9C5D3"
+              font-size="14"
+            >
+              Nov '25
+            </text>
+            <text
+              x="630"
+              y="275"
+              text-anchor="middle"
+              fill="#B9C5D3"
+              font-size="14"
+            >
+              Dec '25
+            </text>
+          </svg>
+        </div>
+        <div class="chart-legend">
+          <div class="legend-item-chart">
+            <div class="legend-line" style="background: #29be7e"></div>
+            <span style="color: #e4edf3; font-weight: 500">Income</span>
+          </div>
+          <div class="legend-item-chart">
+            <div class="legend-line" style="background: #cc8063"></div>
+            <span style="color: #e4edf3; font-weight: 500">Expenses</span>
+          </div>
+          <div class="legend-item-chart">
+            <div class="legend-line" style="background: #3276a0"></div>
+            <span style="color: #e4edf3; font-weight: 500">Savings</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Budget Controller -->
+      <div class="budget-controller">
+        <h2>💰 Budget Controller</h2>
+
+        <div class="budget-item">
+          <div class="budget-header">
+            <span class="budget-label">🛍️ Shopping</span>
+            <span class="budget-value">₹8,000</span>
+          </div>
+          <div class="budget-slider-container">
+            <div class="budget-slider-fill" style="width: 40%">
+              <div class="budget-slider-thumb"></div>
+            </div>
+          </div>
+          <div class="budget-info">
+            <span>₹0</span>
+            <span>₹20,000</span>
+          </div>
+        </div>
+
+        <div class="budget-item">
+          <div class="budget-header">
+            <span class="budget-label">🎬 Entertainment</span>
+            <span class="budget-value">₹5,000</span>
+          </div>
+          <div class="budget-slider-container">
+            <div class="budget-slider-fill" style="width: 50%">
+              <div class="budget-slider-thumb"></div>
+            </div>
+          </div>
+          <div class="budget-info">
+            <span>₹0</span>
+            <span>₹10,000</span>
+          </div>
+        </div>
+
+        <div class="budget-item">
+          <div class="budget-header">
+            <span class="budget-label">📺 Subscriptions</span>
+            <span class="budget-value">₹2,500</span>
+          </div>
+          <div class="budget-slider-container">
+            <div class="budget-slider-fill" style="width: 50%">
+              <div class="budget-slider-thumb"></div>
+            </div>
+          </div>
+          <div class="budget-info">
+            <span>₹0</span>
+            <span>₹5,000</span>
+          </div>
+        </div>
+
+        <div class="budget-item">
+          <div class="budget-header">
+            <span class="budget-label">🍽️ Food & Dining</span>
+            <span class="budget-value">₹12,000</span>
+          </div>
+          <div class="budget-slider-container">
+            <div class="budget-slider-fill" style="width: 60%">
+              <div class="budget-slider-thumb"></div>
+            </div>
+          </div>
+          <div class="budget-info">
+            <span>₹0</span>
+            <span>₹20,000</span>
+          </div>
+        </div>
+
+        <div class="budget-item">
+          <div class="budget-header">
+            <span class="budget-label">🚗 Transportation</span>
+            <span class="budget-value">₹6,000</span>
+          </div>
+          <div class="budget-slider-container">
+            <div class="budget-slider-fill" style="width: 40%">
+              <div class="budget-slider-thumb"></div>
+            </div>
+          </div>
+          <div class="budget-info">
+            <span>₹0</span>
+            <span>₹15,000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pie Charts -->
+      <div class="pie-charts-grid">
+        <div class="pie-chart-card">
+          <h3>Within Budget Categories</h3>
+          <div class="pie-chart pie-in-budget"></div>
+          <div class="legend">
+            <div class="legend-item">
+              <div class="legend-color" style="background: #29be7e"></div>
+              <span class="legend-text">Food & Dining</span>
+              <span class="legend-value">40%</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #3276a0"></div>
+              <span class="legend-text">Utilities</span>
+              <span class="legend-value">30%</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #7fa3a0"></div>
+              <span class="legend-text">Transportation</span>
+              <span class="legend-value">20%</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #b9c5d3"></div>
+              <span class="legend-text">Healthcare</span>
+              <span class="legend-value">10%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pie-chart-card">
+          <h3>Over Budget Categories</h3>
+          <div class="pie-chart pie-out-budget"></div>
+          <div class="legend">
+            <div class="legend-item">
+              <div class="legend-color" style="background: #cc8063"></div>
+              <span class="legend-text">Shopping</span>
+              <span class="legend-value">50%</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #d99576"></div>
+              <span class="legend-text">Entertainment</span>
+              <span class="legend-value">30%</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color" style="background: #e6aa89"></div>
+              <span class="legend-text">Subscriptions</span>
+              <span class="legend-value">20%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Grid - 3 Columns -->
+      <div class="bottom-grid">
+        <!-- Recent Transactions -->
+        <div class="info-card">
+          <h3>💳 Recent Transactions</h3>
+          <div class="transaction-item">
+            <div class="transaction-info">
+              <div class="transaction-name">Grocery Store</div>
+              <div class="transaction-date">Dec 12, 2025</div>
+            </div>
+            <div class="transaction-amount amount-negative">-₹2,450</div>
+          </div>
+          <div class="transaction-item">
+            <div class="transaction-info">
+              <div class="transaction-name">Salary Deposit</div>
+              <div class="transaction-date">Dec 10, 2025</div>
+            </div>
+            <div class="transaction-amount amount-positive">+₹85,000</div>
+          </div>
+          <div class="transaction-item">
+            <div class="transaction-info">
+              <div class="transaction-name">Restaurant</div>
+              <div class="transaction-date">Dec 11, 2025</div>
+            </div>
+            <div class="transaction-amount amount-negative">-₹1,800</div>
+          </div>
+          <div class="see-more">
+            <a href="#transactions">See More →</a>
+          </div>
+        </div>
+
+        <!-- Upcoming Bills -->
+        <div class="info-card">
+          <h3>📅 Upcoming Bills</h3>
+          <div class="bill-item">
+            <div class="bill-info">
+              <div class="bill-name">Electricity Bill</div>
+              <div class="bill-date">Due: Dec 15, 2025</div>
+            </div>
+            <div class="transaction-amount amount-negative">₹2,100</div>
+          </div>
+          <div class="bill-item">
+            <div class="bill-info">
+              <div class="bill-name">Internet Bill</div>
+              <div class="bill-date">Due: Dec 18, 2025</div>
+            </div>
+            <div class="transaction-amount amount-negative">₹899</div>
+          </div>
+          <div class="bill-item">
+            <div class="bill-info">
+              <div class="bill-name">Netflix Subscription</div>
+              <div class="bill-date">Due: Dec 22, 2025</div>
+            </div>
+            <div class="transaction-amount amount-negative">₹649</div>
+          </div>
+        </div>
+
+        <!-- Savings Goals -->
+        <div class="info-card">
+          <h3>🎯 Savings Goals</h3>
+          <div class="savings-item">
+            <div class="savings-info">
+              <div class="savings-name">Laptop</div>
+              <div class="savings-progress-bar">
+                <div
+                  class="savings-progress-fill"
+                  style="
+                    width: 65%;
+                    background: linear-gradient(90deg, #29be7e, #1e9960);
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="transaction-amount" style="color: #29be7e">65%</div>
+          </div>
+          <div class="savings-item">
+            <div class="savings-info">
+              <div class="savings-name">House Down Payment</div>
+              <div class="savings-progress-bar">
+                <div
+                  class="savings-progress-fill"
+                  style="
+                    width: 30%;
+                    background: linear-gradient(90deg, #3276a0, #235a7a);
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="transaction-amount" style="color: #3276a0">30%</div>
+          </div>
+          <div class="savings-item">
+            <div class="savings-info">
+              <div class="savings-name">Phone</div>
+              <div class="savings-progress-bar">
+                <div
+                  class="savings-progress-fill"
+                  style="
+                    width: 85%;
+                    background: linear-gradient(90deg, #b9c5d3, #8a9faf);
+                  "
+                ></div>
+              </div>
+            </div>
+            <div class="transaction-amount" style="color: #b9c5d3">85%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Bot -->
+    <div class="chat-bot"></div>
+  </body>
+</html>
